@@ -40,7 +40,13 @@ button{
   cursor: pointer;
 }
 img{
+  width: 100%;
+  display: block;
+}
+.logo{
   width: 15%;
+  display: block;
+
 }
 input{
   border: none;

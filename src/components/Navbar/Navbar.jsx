@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className='container navbar-content flex'>
         <div className="flexx">
           <Link to = "/" className='navbar-brand flex'>
-            <img src = {logoImg} alt = "site logo" />
+            <img className="logo" src = {logoImg} alt = "site logo" />
             <span className='text-uppercase fw-7 fs-18 ls-1 name'>Arabic Literary Art Agency</span>
             
           </Link>
