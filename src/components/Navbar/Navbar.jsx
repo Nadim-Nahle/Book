@@ -11,10 +11,11 @@ const Navbar = () => {
   return (
     <nav className='navbar' id = "navbar">
       <div className='container navbar-content flex'>
-        <div className='brand-and-toggler flex flex-sb'>
+        <div className="flexx">
           <Link to = "/" className='navbar-brand flex'>
             <img src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-7 fs-24 ls-1'></span>
+            <span className='text-uppercase fw-7 fs-18 ls-1 name'>Arabic Literary Art Agency</span>
+            
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{

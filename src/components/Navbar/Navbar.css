@@ -3,10 +3,17 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 .navbar-brand{
-    width: 90px;
+    width: 700px;
 }
 .navbar-brand span{
     margin-left: 2rem;
+    width: 100%;
+    padding-left: 20px;
+}
+.flexx{
+    display: flex;
+    width: 700px;
+    max-height: 100px;
 }
 .brand-and-toggler{
     width: 100%;
@@ -71,4 +78,11 @@
     .navbar-nav{
         display: flex;
     }
+ 
 }
+
+@media only screen and (max-width: 600px) {
+    .name{
+        display: none;
+    }
+  }
