@@ -12,3 +12,6 @@
     opacity: 0.8;
     max-width: 770px;
 }
+.wide{
+    max-width: 1400px;
+  }
