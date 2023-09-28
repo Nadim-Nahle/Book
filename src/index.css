@@ -46,7 +46,6 @@ img{
 .logo{
   width: 15%;
   display: block;
-
 }
 input{
   border: none;
@@ -128,4 +127,8 @@ input{
 
 .blue{
   color: #163f8d;
+}
+
+.wide{
+  max-width: 900px;
 }
