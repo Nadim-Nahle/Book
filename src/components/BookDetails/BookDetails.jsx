@@ -14,6 +14,7 @@ const BookDetails = () => {
   const [book, setBook] = useState(null);
   const navigate = useNavigate();
 
+
   useEffect(() => {
     setLoading(true);
     async function getBookDetails() {
@@ -47,6 +48,7 @@ const BookDetails = () => {
   if (loading) return <Loading />;
 
   return (
+    
     <>
       <Navbar />
 
@@ -66,7 +68,7 @@ const BookDetails = () => {
                 <span className='fw-6 fs-24'>{book?.title}</span>
               </div>
               <div className='book-details-item description'>
-                <span>{book?.description}</span>
+                <span>{replaceNewlinesWithBreaks(book?.description)}</span>
               </div>
               <div className='book-details-item'>
                 <span className='fw-6'>Subject Places: </span>
@@ -86,6 +88,17 @@ const BookDetails = () => {
       </section>
     </>
   )
+}
+
+function replaceNewlinesWithBreaks(text) {
+  return text
+  .replace(/&quot;/g, '"')
+  .split('\n').map((line, index) => (
+    <React.Fragment key={index}>
+      {line}
+      <br />
+    </React.Fragment>
+  ));
 }
 
 export default BookDetails
