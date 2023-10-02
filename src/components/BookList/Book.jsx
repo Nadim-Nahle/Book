@@ -14,20 +14,22 @@ const Book = ({item}) => {
             <span>{item.title}</span>
           </div>
         </Link>
-
-        <div className='book-item-info-item author fs-15'>
+        <div className="newDiv">
+        <Link to = {`/author/${item.authorID}`} >
+        <div className='book-item-info-item author fs-15 flex-end'>
           <span className='text-capitalize fw-7'>Author: </span>
           <span>{item.author}</span>
         </div>
-
-        <div className='book-item-info-item edition-count fs-15'>
+        </Link>
+        <div className='book-item-info-item edition-count fs-15 flex-end'>
           <span className='text-capitalize fw-7'>Genre: </span>
           <span>{item.type}</span>
         </div>
 
-        <div className='book-item-info-item publish-year fs-15'>
+        <div className='book-item-info-item publish-year fs-15 flex-end'>
           <span className='text-capitalize fw-7'>First Publish Year: </span>
           <span>{item.year}</span>
+        </div>
         </div>
       </div>
     </div>
