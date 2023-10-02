@@ -48,7 +48,7 @@ const BookDetails = () => {
   if (loading) return <Loading />;
 
   return (
-    
+
     <>
       <Navbar />
 
@@ -68,19 +68,13 @@ const BookDetails = () => {
                 <span className='fw-6 fs-24'>{book?.title}</span>
               </div>
               <div className='book-details-item description'>
-                <span>{replaceNewlinesWithBreaks(book?.description)}</span>
-              </div>
-              <div className='book-details-item'>
-                <span className='fw-6'>Subject Places: </span>
-                <span className='text-italic'>{book?.subject_places}</span>
-              </div>
-              <div className='book-details-item'>
-                <span className='fw-6'>Subject Times: </span>
-                <span className='text-italic'>{book?.subject_times}</span>
-              </div>
-              <div className='book-details-item'>
-                <span className='fw-6'>Subjects: </span>
-                <span>{book?.subjects}</span>
+                <span>{(book?.description?.replace(/&quot;/g, '"').split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                )))}
+                </span>
               </div>
             </div>
           </div>
@@ -88,17 +82,6 @@ const BookDetails = () => {
       </section>
     </>
   )
-}
-
-function replaceNewlinesWithBreaks(text) {
-  return text
-  .replace(/&quot;/g, '"')
-  .split('\n').map((line, index) => (
-    <React.Fragment key={index}>
-      {line}
-      <br />
-    </React.Fragment>
-  ));
 }
 
 export default BookDetails
