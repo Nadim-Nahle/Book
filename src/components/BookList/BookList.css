@@ -60,6 +60,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
     .book-item-img img{
-        max-width: 250px;
+        max-width: 300px;
     }
 }
