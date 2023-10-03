@@ -103,9 +103,9 @@ input{
 .flex-column{
   flex-direction: column;
 }
-.flex-sb{
+/* .flex-sb{
   justify-content: space-between;
-}
+} */
 .flex-c{
   justify-content: center;
 }
@@ -131,4 +131,7 @@ input{
 
 .wide{
   max-width: 900px;
+}
+.newDiv{
+  position: relative;
 }

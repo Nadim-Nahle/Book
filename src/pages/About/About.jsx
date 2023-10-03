@@ -18,9 +18,22 @@ const About = () => {
             <img src = {aboutImg} alt = "" />
           </div>
           <div className='about-text'>
-            <h2 className='about-title fs-26 ls-1 blue'>About BookHub</h2>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus dignissimos consequuntur vero commodi provident maiores, iusto atque corrupti voluptate vel sequi consectetur unde aliquam corporis saepe animi non, tempora reiciendis molestias sed laudantium dolores. Assumenda aperiam fuga quo voluptate commodi ullam aliquam expedita voluptas delectus.</p>
-            <p className='fs-17'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, dicta, possimus inventore eveniet atque voluptatibus repellendus aspernatur illo aliquam dignissimos illum. Commodi, porro omnis dolore amet neque modi quas eum!</p>
+            <h2 className='about-title fs-26 ls-1 blue'>About Soha Agency</h2>
+            <p className='header-text fs-18 fw-6'>Soha Agency is an agency specialized in Arabic Literary Arts. Its goal is to promote Arabic
+            literature as well as its artistic creations throughout the world.</p>
+          <p className='header-text fs-18 fw-6'>How was this idea originated?</p>
+          <p className='header-text fs-18 fw-6'>As I grew up in Lebanon, then migrated to France and later to England to study and work
+            there, an incredible thing happened to me: I was projected towards the International but
+            also brought back towards my culture. In which way? As a doctoral graduate and professor
+            of literature for twenty years, I understood that the cultural identity of each country is
+            deeply linked to its literary arts.</p>
+          <p className='header-text fs-18 fw-6'>Afterwards, I returned to Lebanon to work in the field of Arabic publishing for a position as
+            an editor and the head of foreign rights at Dar Altanweer. I have discovered a literary wealth
+            that is still little known. The Arab Publishing World, open to international literary
+            production, invests enormously in the purchase of foreign rights but little in the exhibition
+            of Arabic literature abroad. Some works escape, but many others still wait in silence.</p>
+          <p className='header-text fs-18 fw-6'>So, a mission seemed necessary to me: to promote Arab literary arts which still seem to
+            have little international exposure, to create a sort of silk road.</p>
           </div>
         </div>
       </div>
