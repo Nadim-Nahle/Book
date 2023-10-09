@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom';
 import { AppProvider } from './context.';
 import './index.css';
-import Home from './pages/Home/Home';
 import About from "./pages/About/About";
 import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
