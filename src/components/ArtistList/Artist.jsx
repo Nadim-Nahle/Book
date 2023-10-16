@@ -5,7 +5,7 @@ import "./ArtistList.css";
 const Artist = ({ item }) => {
   return (
     <div className='book-item flex flex-column flex-sb'>
-      <Link to={`/author/${item.id}`} ><div className='book-item-img'>
+      <Link to={`/author/${item.id}`} ><div className='artist-item-img'>
         <img src={item.image} alt="cover" />
       </div>
       </Link>
