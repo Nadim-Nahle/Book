@@ -15,10 +15,12 @@
 .book-item:hover{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
-.book-item-img img{
-    width: 300px;
+.artist-item-img img{
+    width: 270px;
     margin-right: auto;
     margin-left: auto;
+    height: 300px;
+
 }
 .book-item-info{
     margin-top: 2rem;
@@ -44,13 +46,18 @@
     .booklist-content{
         grid-template-columns: repeat(2, 1fr);
     }
+    .artist-item-img img{
+        width: 270px;
+        margin-right: auto;
+        margin-left: auto;
+    }
 }
 
 @media screen and (min-width: 992px){
     .booklist-content{
         grid-template-columns: repeat(2, 1fr);
     }
-    .book-item-img img{
+    .artist-item-img img{
         height: 300px;
     }
 }
