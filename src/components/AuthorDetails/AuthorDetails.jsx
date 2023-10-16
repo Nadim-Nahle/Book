@@ -5,13 +5,13 @@ import coverImg from "../../images/cover_not_found.jpg";
 import "./AuthorDetails.css";
 import { FaArrowLeft } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
-import books from "../../books.json";
+import artists from "../../artist.json";
 import Navbar from '../Navbar/Navbar';
 
 const AuthorDetails = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(false);
-  const [book, setBook] = useState(null);
+  const [artist, setArtist] = useState(null);
   const navigate = useNavigate();
 
 
@@ -19,23 +19,20 @@ const AuthorDetails = () => {
     setLoading(true);
     async function getAuthorDetails() {
       try {
-        const data = books[id - 1];
+        const data = artists[id-1];
         console.log(data);
+
         if (data) {
-          const { authorDetails: description, author, image: covers, subject_places, subject_times, subjects, authorImage } = data;
-          console.log(covers, 'a')
-          const newBook = {
-            description: description ? description : "No description found",
-            title: author,
-            authorImage: authorImage,
-            cover_img: covers ? covers : coverImg,
-            subject_places: subject_places ? subject_places.join(", ") : "No subject places found",
-            subject_times: subject_times ? subject_times.join(", ") : "No subject times found",
-            subjects: subjects ? subjects.join(", ") : "No subjects found"
+          const { details: details, title, subject_places, subject_times, subjects, image } = data;
+          const newAuthor = {
+            title: title,
+            details: details,
+            image: image ? image : coverImg
           };
-          setBook(newBook);
+
+          setArtist(newAuthor);
         } else {
-          setBook(null);
+          setArtist(null);
         }
         setLoading(false);
       } catch (error) {
@@ -62,14 +59,14 @@ const AuthorDetails = () => {
 
           <div className='book-details-content grid'>
             <div className='book-details-img'>
-              <img src={book?.authorImage} alt="cover img" />
+              <img src={artist?.image} alt="cover img" />
             </div>
             <div className='book-details-info'>
               <div className='book-details-item title'>
-                <span className='fw-6 fs-24'>{book?.title}</span>
+                <span className='fw-6 fs-24'>{artist?.title}</span>
               </div>
               <div className='book-details-item description'>
-                <span>{(book?.description?.replace(/&quot;/g, '"').split('\n').map((line, index) => (
+                <span>{(artist?.details?.replace(/&quot;/g, '"').split('\n').map((line, index) => (
                   <React.Fragment key={index}>
                     {line}
                     <br />
