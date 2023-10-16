@@ -14,7 +14,7 @@ const ArtistList = (book) => {
       <section className='booklist'>
         <div className='container'>
           <div className='section-title'>
-            <h2>{resultTitle}</h2>
+            <h2>Artists</h2>
           </div>
           <div className='booklist-content grid'>
             {
