@@ -1,12 +1,12 @@
 import React from 'react';
 import { useGlobalContext } from '../../context.';
-import Book from "../BookList/Book";
-import bookes from "../../books.json";
+import artists from "../../artist.json";
 import Navbar from '../Navbar/Navbar';
+import Artist from './Artist';
 
 //https://covers.openlibrary.org/b/id/240727-S.jpg
 
-const BookList = (book) => {
+const ArtistList = (book) => {
   const { resultTitle } = useGlobalContext();
   return (
     <>
@@ -14,13 +14,13 @@ const BookList = (book) => {
       <section className='booklist'>
         <div className='container'>
           <div className='section-title'>
-            <h2>Books</h2>
+            <h2>Artists</h2>
           </div>
           <div className='booklist-content grid'>
             {
-              bookes.map((item) => {
+              artists.map((item) => {
                 return (
-                  <Book item={item} key={item.id} />
+                  <Artist item={item} key={item.id} />
                 )
               })
             }
@@ -31,4 +31,4 @@ const BookList = (book) => {
   )
 }
 
-export default BookList
+export default ArtistList
