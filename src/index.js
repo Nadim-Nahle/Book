@@ -11,21 +11,23 @@ import BookDetails from "./components/BookDetails/BookDetails";
 import ContactForm from './pages/Contact/Contact';
 import AuthorDetails from './components/AuthorDetails/AuthorDetails';
 import ArtistList from './components/ArtistList/ArtistList';
+import Home from './pages/Home/Home';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <AppProvider>
     <BrowserRouter>
       <Routes>
-        <Route path = "/" element = {<BookList />}>
-          
+        <Route path="/" element={<BookList />}>
+
         </Route>
-        <Route path = "about" element = {<About />} />
-        <Route path = "contact" element = {<ContactForm />} />
-        <Route path = "book" element = {<BookList />} />
-        <Route path = "artist" element = {<ArtistList />} />
-          <Route path = "/book/:id" element = {<BookDetails />} />
-          <Route path = "/author/:id" element = {<AuthorDetails />} />
+        <Route path="landing" element={<Home />}></Route>
+        <Route path="about" element={<About />} />
+        <Route path="contact" element={<ContactForm />} />
+        <Route path="book" element={<BookList />} />
+        <Route path="artist" element={<ArtistList />} />
+        <Route path="/book/:id" element={<BookDetails />} />
+        <Route path="/author/:id" element={<AuthorDetails />} />
       </Routes>
     </BrowserRouter>
   </AppProvider>
