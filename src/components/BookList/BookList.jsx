@@ -1,5 +1,4 @@
 import React from 'react';
-import { useGlobalContext } from '../../context.';
 import Book from "../BookList/Book";
 import bookes from "../../books.json";
 import Navbar from '../Navbar/Navbar';
@@ -7,7 +6,6 @@ import Navbar from '../Navbar/Navbar';
 //https://covers.openlibrary.org/b/id/240727-S.jpg
 
 const BookList = (book) => {
-  const { resultTitle } = useGlobalContext();
   return (
     <>
       <Navbar />
