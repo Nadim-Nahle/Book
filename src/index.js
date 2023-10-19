@@ -12,6 +12,7 @@ import ContactForm from './pages/Contact/Contact';
 import AuthorDetails from './components/AuthorDetails/AuthorDetails';
 import ArtistList from './components/ArtistList/ArtistList';
 import Home from './pages/Home/Home';
+import Gallery from './pages/Gallery/Gallery';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -27,6 +28,7 @@ root.render(
         <Route path="artist" element={<ArtistList />} />
         <Route path="/book/:id" element={<BookDetails />} />
         <Route path="/author/:id" element={<AuthorDetails />} />
+        <Route path="/gallery" element={<Gallery />} />
       </Routes>
     </BrowserRouter>
   </AppProvider>
