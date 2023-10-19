@@ -11,7 +11,7 @@ const Header = () => {
       <header className='header'>
         <Navbar />
         <section class="top">
-          <div class="title">
+          <div class="title1">
             <h3>Welcome to</h3>
             <h1>Soha Agency</h1>
           </div>
