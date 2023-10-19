@@ -75,9 +75,14 @@ const AuthorDetails = () => {
                 </span>
               </div>
             </div>
+            {
+              id == 2 ?
             <Link to={`/gallery`}>
             <div className='art-btn'>Click here to check his art collection</div>
             </Link>
+            :
+            null
+              }
           </div>       
         </div>
       </section>
