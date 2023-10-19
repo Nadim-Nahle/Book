@@ -23,7 +23,7 @@ const AuthorDetails = () => {
         console.log(data);
 
         if (data) {
-          const { details: details, title, subject_places, subject_times, subjects, image } = data;
+          const { details, title, image } = data;
           const newAuthor = {
             title: title,
             details: details,
@@ -76,7 +76,7 @@ const AuthorDetails = () => {
               </div>
             </div>
             {
-              id == 2 ?
+              id === "2" ?
             <Link to={`/gallery`}>
             <div className='art-btn'>Click here to check his art collection</div>
             </Link>
