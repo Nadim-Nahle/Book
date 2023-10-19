@@ -1,9 +1,12 @@
 import React from 'react';
 import Navbar from "../Navbar/Navbar";
 import "./Header.css";
+import RedirectOnWidth from '../redirect/RedirectOnWidth';
 
 const Header = () => {
   return (
+    <>
+    <RedirectOnWidth />
     <div className='holder'>
       <header className='header'>
         <Navbar />
@@ -35,6 +38,7 @@ const Header = () => {
         </section>
       </header>
     </div>
+    </>
   )
 }
 
